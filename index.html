@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DroughtScan – Graph</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial}
+  svg{width:100vw;height:100vh;display:block;background:#fff}
+
+  /* grafo */
+  .link{fill:none;stroke-opacity:.95;vector-effect:non-scaling-stroke}
+  .node circle{fill:#eee;stroke:#888;stroke-width:1;vector-effect:non-scaling-stroke}
+  .label{font-size:12px;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round}
+
+  /* stati */
+  .faded{opacity:.14}
+  .neighbor{opacity:.92}
+  .selected{opacity:1}
+  .selected circle{stroke:#333;stroke-width:3}
+
+  /* pannello legenda (fisso) */
+  .overlay{
+    position:fixed; top:16px; left:16px; max-width:360px;
+    background:rgba(255,255,255,.96); border:1px solid #e3e3e3; border-radius:10px;
+    box-shadow:0 2px 12px rgba(0,0,0,.08); padding:12px; backdrop-filter:blur(4px);
+    z-index:10; user-select:none
+  }
+  .row{display:flex;align-items:center;justify-content:space-between;gap:8px}
+  .legend-item{display:grid;grid-template-columns:18px 1fr;gap:8px;align-items:center;margin:4px 0}
+  .swatch{width:16px;height:4px;border-radius:3px;border:1px solid rgba(0,0,0,.08);cursor:pointer}
+  .swatch.focus{outline:2px solid #222}
+  .hint{font-size:11px;color:#666;margin-top:6px}
+  .btn{appearance:none;border:1px solid #e3e3e3;background:#f7f7f7;padding:4px 8px;border-radius:6px;cursor:pointer;font-size:12px}
+  .btnbar{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+
+  /* legenda: livelli core (stile linee) */
+  .legend-block{margin-top:10px;padding-top:8px;border-top:1px dashed #e5e5e5}
+  .core-row{display:grid;grid-template-columns:42px 1fr;gap:10px;align-items:center;margin:6px 0}
+  /* righe legenda core */
+  .core-row{ display:flex; align-items:center; gap:12px; }
+
+  /* scatola che contiene la linea */
+  .core-chip{
+  position: relative;
+  width: 120px;        /* lunghezza del campione */
+  height: 14px;        /* spessore visivo del campione */
+  flex: 0 0 auto;      /* non si allarga mai */
+  }
+
+  /* la linea vera e propria (sempre dentro la scatola) */
+  .core-chip::before{
+  content: "";
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%; transform: translateY(-50%);
+  border-top: 2px solid #000;   /* base */
+  }
+  .nodes .label { pointer-events: none; }   /* il testo non intercetta l'hover */
+  .nodes circle { pointer-events: auto; }   /* il cerchio sì (necessario per <title>) */
+
+  /* varianti */
+  .core-chip.faible::before{  border-top-style: dashed;  border-top-width: 2px; }
+  .core-chip.low::before{     border-top-width: 1px; }
+  .core-chip.medium::before{  border-top-width: 3px; }
+  .core-chip.high::before{    border-top-width: 5px; }
+
+  /* il testo dei nodi non intercetta il mouse; il cerchio sì */
+  .nodes .label { pointer-events: none; }
+  .nodes circle { pointer-events: auto; }
+
+  /* tooltip istantaneo */
+  .tooltip {
+    position: fixed;
+    display: none;
+    pointer-events: none;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    line-height: 1;
+    z-index: 9999;
+}
+</style>
+</head>
+<body>
+<div class="overlay" id="panel">
+  <div class="row">
+    <strong>Legenda & focus predicati</strong>
+    <div class="btnbar" style="gap:4px">
+      <button class="btn" id="zoomIn">+</button>
+      <button class="btn" id="zoomOut">−</button>
+      <button class="btn" id="zoom100">100%</button>
+      <button class="btn" id="zoomCenter">Centro</button>
+    </div>
+  </div>
+
+  <!-- Predicati (colori) -->
+  <div id="legend"></div>
+  <div class="hint">Clic: solo quel predicato · Clic di nuovo: tutto · Shift+clic: più predicati</div>
+
+  <!-- Livelli core (stile linee) -->
+  <div class="legend-block">
+    <div style="font-weight:600;margin-bottom:4px">Livello core delle relazioni</div>
+    <div class="core-row"><div class="core-chip faible"></div><div>faible (tratteggiato)</div></div>
+    <div class="core-row"><div class="core-chip low"></div><div>low</div></div>
+    <div class="core-row"><div class="core-chip medium"></div><div>medium</div></div>
+    <div class="core-row"><div class="core-chip high"></div><div>high</div></div>
+  </div>
+
+  <div class="btnbar" style="margin-top:8px">
+    <button class="btn" id="clearSelBtn">Pulisci selezione</button>
+  </div>
+</div>
+
+<svg viewBox="0 0 1000 800" preserveAspectRatio="xMidYMid meet">
+  <g id="graph"></g>
+</svg>
+
+<script>
+const svg = d3.select("svg");
+const g   = d3.select("#graph");
+
+const zoom = d3.zoom().scaleExtent([0.2, 8]).on("zoom", e => g.attr("transform", e.transform));
+svg.call(zoom);
+
+const color = d3.scaleOrdinal(d3.schemeTableau10);
+
+// stato UI
+let focusPredicates = new Set();
+let selectedNode = null;
+let neighbors = new Map();
+
+// ——— helper: leggo il livello core dai dati (weight/core/core_level/level) con fallback ———
+function getLevel(l){
+  const raw = (l.weight ?? l.core ?? l.core_level ?? l.level ?? "").toString().toLowerCase().trim();
+  if (["faible","weak","f","0"].includes(raw)) return "faible";
+  if (["low","l","1"].includes(raw)) return "low";
+  if (["medium","med","m","2"].includes(raw)) return "medium";
+  if (["high","h","3"].includes(raw)) return "high";
+  const w = +l.strokeWidth || 2;               // fallback da strokeWidth
+  if (w <= 1.5) return "low";
+  if (w <= 3.5) return "medium";
+  return "high";
+}
+// spessori canonici per low/medium/high (faible = tratteggio)
+function widthFor(level, fallback){
+  if (level==="low") return 1;
+  if (level==="medium") return 3;
+  if (level==="high") return 5;
+  return 1 || (+fallback||2); // faible: stesso spessore base di low
+}
+function dashFor(level, existing){
+  if (level==="faible") return "6,4";          // tratteggio forzato
+  if (existing && existing!=="none") return existing;
+  return null;
+}
+
+fetch("droughtscan_graph_final.json").then(r=>r.json()).then(data=>{
+  // Predicati presenti (per la legenda colori)
+  const predicates = Array.from(new Set(data.links.map(d=>d.predicate))).sort();
+
+  // Marker frecce SOLO CONTORNO (patch #1)
+  const defs = svg.append("defs");
+  predicates.forEach(p=>{
+    const id = p.replace(/[^a-zA-Z0-9\-_]/g,"_");
+    defs.append("marker")
+      .attr("id","arrow-"+id).attr("viewBox","0 -5 10 10")
+      .attr("refX",18).attr("refY",0)
+      .attr("markerWidth",10).attr("markerHeight",10)
+      .attr("orient","auto").attr("markerUnits","userSpaceOnUse")
+      .append("path").attr("d","M0,-5L10,0L0,5")
+        .attr("fill","none")                  // ← contorno
+        .attr("stroke",color(p))
+        .attr("stroke-width",1.5);
+  });
+
+  // Legenda interattiva (focus per predicato)
+  const L = d3.select("#legend").selectAll(".legend-item").data(predicates).enter()
+    .append("div").attr("class","legend-item");
+  L.append("div").attr("class","swatch").style("background", d=>color(d))
+    .on("click",(ev,pred)=>{
+      const sw = d3.select(ev.currentTarget);
+      if (ev.shiftKey){
+        if (focusPredicates.has(pred)) { focusPredicates.delete(pred); sw.classed("focus", false); }
+        else { focusPredicates.add(pred); sw.classed("focus", true); }
+      } else {
+        if (focusPredicates.size===1 && focusPredicates.has(pred)) {
+          focusPredicates.clear(); d3.selectAll(".swatch").classed("focus", false);
+        } else {
+          focusPredicates = new Set([pred]); d3.selectAll(".swatch").classed("focus", d=>d===pred);
+        }
+      }
+      applyStyles();
+    });
+  L.append("div").text(d=>d);
+
+  // Vicinanze
+  data.nodes.forEach(n=>neighbors.set(n.id,new Set()));
+  data.links.forEach(l=>{
+    neighbors.get(l.source).add(l.target);
+    neighbors.get(l.target).add(l.source);
+  });
+
+  // Simulazione base (come la tua)
+  const sim = d3.forceSimulation(data.nodes)
+    .force("link", d3.forceLink(data.links).id(d=>d.id).distance(80).strength(0.45))
+    .force("charge", d3.forceManyBody().strength(-220))
+    .force("center", d3.forceCenter(500,400))
+    .force("collision", d3.forceCollide().radius(20));
+
+  // Links: usa i tuoi spessori, ma forza tratteggio su 'faible' (patch #2)
+  const links = g.append("g").attr("class","links")
+    .selectAll("path").data(data.links).enter().append("path")
+      .attr("class","link")
+      .attr("stroke", d=>color(d.predicate))
+      .attr("stroke-width", d => widthFor(getLevel(d), d.strokeWidth))
+      .attr("stroke-dasharray", d => dashFor(getLevel(d), d.strokeDasharray))
+      .attr("marker-end", d => `url(#arrow-${d.predicate.replace(/[^a-zA-Z0-9\-_]/g,"_")})`);
+
+  // Nodes
+  const nodes = g.append("g").attr("class","nodes")
+    .selectAll("g").data(data.nodes).enter().append("g").attr("class","node")
+      .call(d3.drag().on("start",dragstarted).on("drag",dragged).on("end",dragended));
+
+  nodes.append("circle").attr("r",8);
+  nodes.append("text").attr("class","label").attr("x",10).attr("dy",".32em").text(d=>d.id);
+  
+  // tooltip sul CERCHIO (non sul <g>)
+  nodes.select("circle").append("title").text(d => d.title || d.id);
+  nodes.on("click",(ev,d)=>{ ev.stopPropagation(); selectedNode = (selectedNode && selectedNode.id===d.id) ? null : d; applyStyles(); });
+
+  sim.on("tick", ()=>{
+    links.attr("d", d=>{
+      const sx=(typeof d.source==="object"?d.source.x:data.nodes.find(n=>n.id===d.source).x);
+      const sy=(typeof d.source==="object"?d.source.y:data.nodes.find(n=>n.id===d.source).y);
+      const tx=(typeof d.target==="object"?d.target.x:data.nodes.find(n=>n.id===d.target).x);
+      const ty=(typeof d.target==="object"?d.target.y:data.nodes.find(n=>n.id===d.target).y);
+      const dx=tx-sx, dy=ty-sy, L=Math.hypot(dx,dy)||1, off=10;
+      return `M${sx},${sy} L${tx - (dx/L)*off},${ty - (dy/L)*off}`;
+    });
+    nodes.attr("transform", d=>`translate(${d.x},${d.y})`);
+  });
+
+  // ---- Controlli zoom + Centro che evita la legenda (patch #3) ----
+  function panelLeftPad(){
+    const pr = document.getElementById('panel').getBoundingClientRect();
+    return pr.width + 16; // 16px di respiro
+  }
+function centerSafe(){
+  // fit sull'intero viewport (non sottraggo la larghezza della legenda)
+  const padL = 24, padR = 24, padT = 24, padB = 64;
+
+  // bbox del grafo + estensione per frecce/spessori
+  const b = g.node().getBBox(); if (!b.width || !b.height) return;
+  const EXT = 72;  // margine generoso per marker e stroke
+  const bx = b.x - EXT, by = b.y - EXT, bw = b.width + EXT*2, bh = b.height + EXT*2;
+
+  const W = svg.node().clientWidth, H = svg.node().clientHeight;
+  const availW = Math.max(220, W - padL - padR);
+  const availH = Math.max(220, H - padT - padB);
+
+  const k  = Math.min(availW / bw, availH / bh) * 0.92; // un filo di respiro
+  const cx = bx + bw/2, cy = by + bh/2;
+  const tx = padL + availW/2 - cx * k;
+  const ty = padT + availH/2 - cy * k;
+
+  g.attr("transform", `translate(${tx},${ty}) scale(${k})`);
+}
+  const step = 1.25;
+  document.getElementById("zoomIn").onclick  = ()=>{ svg.transition().duration(120).call(zoom.scaleBy, step, [window.innerWidth/2, window.innerHeight/2]); };
+  document.getElementById("zoomOut").onclick = ()=>{ svg.transition().duration(120).call(zoom.scaleBy, 1/step, [window.innerWidth/2, window.innerHeight/2]); };
+  document.getElementById("zoom100").onclick = ()=>{ const t=d3.zoomTransform(svg.node()); const z=d3.zoomIdentity.translate(t.x,t.y).scale(1); svg.transition().duration(120).call(zoom.transform,z); };
+  document.getElementById("zoomCenter").onclick = centerSafe;
+
+  document.getElementById("clearSelBtn").onclick = ()=>{ selectedNode=null; applyStyles(); };
+
+  // centra all’avvio quando la simulazione si calma e su resize
+  setTimeout(centerSafe, 600);
+  sim.on("end", centerSafe);
+  window.addEventListener("resize", centerSafe);
+
+  // stile dinamico (focus + selezione nodo)
+  function applyStyles(){
+    links.classed("faded", d => (focusPredicates.size>0 && !focusPredicates.has(d.predicate)));
+    const nodesSel = nodes.classed("faded", false).classed("neighbor", false).classed("selected", false);
+    if (selectedNode){
+      const neigh = neighbors.get(selectedNode.id) || new Set();
+      links.classed("faded", d => !( (d.source.id??d.source)===selectedNode.id || (d.target.id??d.target)===selectedNode.id ));
+      nodesSel
+        .classed("selected", n => n.id===selectedNode.id)
+        .classed("neighbor", n => neigh.has(n.id))
+        .classed("faded", n => n.id!==selectedNode.id && !neigh.has(n.id));
+    }
+  }
+});
+
+// drag
+function dragstarted(ev){ if(!ev.active){ ev.subject.fx=ev.subject.x; ev.subject.fy=ev.subject.y; } }
+function dragged(ev){ ev.subject.fx=ev.x; ev.subject.fy=ev.y; }
+function dragended(ev){ ev.subject.fx=null; ev.subject.fy=null; }
+</script>
+<div id="tt" class="tooltip"></div>
+</body>
+</html>
