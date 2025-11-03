@@ -1,0 +1,1180 @@
+{
+  "nodes": [
+    {
+      "id": "CDN-003",
+      "title": "L\u2019Innovazione della CDN in DroughtScan"
+    },
+    {
+      "id": "SPI-002",
+      "title": "SPI su scala 1 mese (SPI1)"
+    },
+    {
+      "id": "SYS-004",
+      "title": "Libreria Python DroughtScan"
+    },
+    {
+      "id": "FORE-002",
+      "title": "La Metodologia del Forecast. Proiettare la Siccit\u00e0 nel Futuro."
+    },
+    {
+      "id": "HYD-003",
+      "title": "Bilancio idrico del bacino"
+    },
+    {
+      "id": "CDN-002",
+      "title": "CDN: Lettura Operativa in Tre Movimenti"
+    },
+    {
+      "id": "SPI-001",
+      "title": "SPI"
+    },
+    {
+      "id": "HYD-002",
+      "title": "Stazione di misura idrometrica"
+    },
+    {
+      "id": "SYS-002",
+      "title": "La Trasparenza dei Metadati. Carta d'Identit\u00e0 dei Dati"
+    },
+    {
+      "id": "FORE-003",
+      "title": "Come leggere il grafico del forecast DroughtScan"
+    },
+    {
+      "id": "ANT-009",
+      "title": "Uno Strumento, Molti Sguardi - Come DroughtScan si Adatta a Utenti Diversi"
+    },
+    {
+      "id": "HMAP-002",
+      "title": "Come leggere la heatmap in 3 passi"
+    },
+    {
+      "id": "CDN-001",
+      "title": "CDN: Definizione Tecnica e Vantaggi"
+    },
+    {
+      "id": "HYD-001",
+      "title": "Portata alla sezione di chiusura"
+    },
+    {
+      "id": "DRG-001",
+      "title": "Guida per il cittadino: Capire la siccit\u00e0 per agire con consapevolezza"
+    },
+    {
+      "id": "BSL-001",
+      "title": "La Baseline Climatica: Il Nostro Metro per Misurare la Normalit\u00e0"
+    },
+    {
+      "id": "ANT-001",
+      "title": "Perch\u00e9 DroughtScan. Uno strumento per leggere, capire e affrontare meglio la siccit\u00e0."
+    },
+    {
+      "id": "VLD-001",
+      "title": "Validazione Tecnica e Metriche di Performance"
+    },
+    {
+      "id": "D-006",
+      "title": "Uso del D(SPI) anche in Assenza di Dati di Portata"
+    },
+    {
+      "id": "VLD-002",
+      "title": "La Validazione di DroughtScan. Perch\u00e9 Possiamo Fidarci."
+    },
+    {
+      "id": "ANT-006",
+      "title": "L'Approccio Multiscala: Vedere il Dettaglio e la Panoramica"
+    },
+    {
+      "id": "D-001",
+      "title": "Indice D(SPI): Un Indicatore Sintetico e Multiscala"
+    },
+    {
+      "id": "HMAP-005",
+      "title": "I pattern della siccit\u00e0. Leggere i segnali rossi."
+    },
+    {
+      "id": "ANT-005",
+      "title": "La Memoria del Sistema: Perch\u00e9 le Condizioni Iniziali Contano"
+    },
+    {
+      "id": "D-007",
+      "title": "Schemi di Pesatura dell\u2019Indice D(SPI)"
+    },
+    {
+      "id": "ANT-008",
+      "title": "La Filosofia di DroughtScan: Rigore e Accessibilit\u00e0"
+    },
+    {
+      "id": "D-004",
+      "title": "Soglia Operativa dell\u2019Indice D(SPI)"
+    },
+    {
+      "id": "D-005",
+      "title": "Ottimizzazione dell\u2019Indice D(SPI) sulla Portata Fluviale"
+    },
+    {
+      "id": "ANT-004",
+      "title": "DroughtScan e Adattamento Climatico"
+    },
+    {
+      "id": "DAT-MAIN",
+      "title": "La qualit\u00e0 dei dati prima di tutto"
+    },
+    {
+      "id": "GUI-001",
+      "title": "L'Ordine di Lettura della Dashboard. Una Guida per l'Utente"
+    },
+    {
+      "id": "HMAP-004",
+      "title": "La legenda dei colori della heatmap"
+    },
+    {
+      "id": "ANT-003",
+      "title": "Fattori naturali e antropici nel bilancio idrico"
+    },
+    {
+      "id": "ANT-007",
+      "title": "Servizi Climatici Semplificati: Meno Complessit\u00e0 per l'Utente"
+    },
+    {
+      "id": "SYS-003",
+      "title": "La Pipeline di DroughtScan. Dai Dati ai Grafici"
+    },
+    {
+      "id": "HMAP-003",
+      "title": "Errori comuni nella lettura della heatmap"
+    },
+    {
+      "id": "ANT-002",
+      "title": "Perch\u00e9 abbiamo creato il DroughtScan?"
+    },
+    {
+      "id": "HMAP-006",
+      "title": "I pattern di ricarica. Leggere i segnali verdi."
+    },
+    {
+      "id": "FORE-001",
+      "title": "Comunicare le Previsioni. Guida all'Incertezza"
+    },
+    {
+      "id": "D-003",
+      "title": "D(SPI): un indicatore sintetico per la siccit\u00e0 a fini operativi"
+    },
+    {
+      "id": "HMAP-001",
+      "title": "La Heatmap di DroughtScan. Come funziona e cosa mostra."
+    },
+    {
+      "id": "D-002",
+      "title": "Come si Calcola D(SPI): Pesi, Scale e Ottimizzazione"
+    },
+    {
+      "id": "METHOD-002",
+      "title": "La Distribuzione Gamma: la lente corretta per leggere la pioggia"
+    },
+    {
+      "id": "VLD-003",
+      "title": "La Prova dei Fatti. Il Caso Studio del Bacino del Po"
+    },
+    {
+      "id": "SYS-001",
+      "title": "Interoperabilit\u00e0. Come DroughtScan Parla con Altri Sistemi"
+    }
+  ],
+  "links": [
+    {
+      "source": "ANT-001",
+      "target": "ANT-007",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-001",
+      "target": "ANT-008",
+      "predicate": "extends",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-001",
+      "target": "ANT-002",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-001",
+      "target": "CDN-003",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-002",
+      "target": "ANT-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-002",
+      "target": "GUI-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-003",
+      "target": "CDN-002",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-003",
+      "target": "HYD-003",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-003",
+      "target": "HYD-001",
+      "predicate": "extends",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-003",
+      "target": "CDN-003",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-004",
+      "target": "CDN-003",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-004",
+      "target": "FORE-001",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-004",
+      "target": "ANT-008",
+      "predicate": "complements",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-004",
+      "target": "FORE-002",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-004",
+      "target": "SYS-004",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "4,2"
+    },
+    {
+      "source": "ANT-005",
+      "target": "CDN-002",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-005",
+      "target": "CDN-003",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-005",
+      "target": "ANT-004",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-005",
+      "target": "CDN-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-005",
+      "target": "HMAP-004",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-005",
+      "target": "CDN-002",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-006",
+      "target": "HMAP-004",
+      "predicate": "extends",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-006",
+      "target": "SYS-004",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-006",
+      "target": "ANT-002",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-006",
+      "target": "HMAP-004",
+      "predicate": "interprets",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-007",
+      "target": "ANT-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-007",
+      "target": "ANT-008",
+      "predicate": "extends",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-007",
+      "target": "ANT-009",
+      "predicate": "extends",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-008",
+      "target": "ANT-001",
+      "predicate": "complements",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-008",
+      "target": "ANT-007",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-008",
+      "target": "ANT-004",
+      "predicate": "supports",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "ANT-009",
+      "target": "ANT-007",
+      "predicate": "complements",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "BSL-001",
+      "target": "HMAP-001",
+      "predicate": "explains_use_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "BSL-001",
+      "target": "SPI-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-001",
+      "target": "CDN-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-001",
+      "target": "DRG-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "CDN-001",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "ANT-003",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "DRG-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "ANT-005",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "HYD-003",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "HYD-001",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "ANT-003",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-002",
+      "target": "DRG-001",
+      "predicate": "is_part_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "BSL-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "ANT-009",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "ANT-005",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "SPI-002",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-001",
+      "predicate": "extends",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-002",
+      "predicate": "complements",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-001",
+      "predicate": "explains",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-002",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "CDN-003",
+      "target": "CDN-001",
+      "predicate": "explains",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-001",
+      "target": "D-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-001",
+      "target": "D-005",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-001",
+      "target": "ANT-006",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-001",
+      "target": "D-004",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-001",
+      "target": "D-006",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-002",
+      "target": "D-003",
+      "predicate": "is_example_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-002",
+      "target": "SPI-001",
+      "predicate": "is_example_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-002",
+      "target": "D-005",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-002",
+      "target": "D-007",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-002",
+      "target": "D-001",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "D-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "D-002",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "D-005",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "ANT-006",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "D-004",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-003",
+      "target": "D-006",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-004",
+      "target": "VLD-003",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-004",
+      "target": "VLD-001",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-003",
+      "predicate": "is_example_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "VLD-002",
+      "predicate": "is_example_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "HYD-002",
+      "predicate": "is_example_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-002",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-004",
+      "predicate": "is_example_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-007",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-006",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-001",
+      "predicate": "is_example_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-005",
+      "target": "D-003",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-006",
+      "target": "HYD-002",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "D-006",
+      "target": "DAT-MAIN",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DAT-MAIN",
+      "target": "METHOD-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DAT-MAIN",
+      "target": "SYS-002",
+      "predicate": "is_part_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DAT-MAIN",
+      "target": "SYS-003",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DAT-MAIN",
+      "target": "SYS-003",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DRG-001",
+      "target": "SPI-001",
+      "predicate": "explains_use_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "DRG-001",
+      "target": "SPI-002",
+      "predicate": "explains_use_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "FORE-001",
+      "target": "FORE-002",
+      "predicate": "complements",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "FORE-001",
+      "target": "FORE-003",
+      "predicate": "interprets",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "FORE-002",
+      "target": "FORE-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "FORE-002",
+      "target": "FORE-003",
+      "predicate": "explains_use_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "GUI-001",
+      "target": "HMAP-004",
+      "predicate": "is_part_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "GUI-001",
+      "target": "SYS-001",
+      "predicate": "is_part_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "GUI-001",
+      "target": "SYS-003",
+      "predicate": "is_part_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-001",
+      "target": "HMAP-004",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-001",
+      "target": "HMAP-004",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-001",
+      "target": "HMAP-006",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-001",
+      "target": "HMAP-005",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-002",
+      "target": "HMAP-004",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-002",
+      "target": "HMAP-006",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-002",
+      "target": "HMAP-005",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-003",
+      "target": "DRG-001",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-003",
+      "target": "HMAP-001",
+      "predicate": "explains_use_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "HMAP-002",
+      "predicate": "complements",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "HMAP-001",
+      "predicate": "explains_use_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "ANT-006",
+      "predicate": "is_application_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "HMAP-003",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "HMAP-002",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "HMAP-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-004",
+      "target": "GUI-001",
+      "predicate": "complements",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-005",
+      "target": "HMAP-006",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HMAP-006",
+      "target": "HMAP-005",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HYD-001",
+      "target": "HYD-003",
+      "predicate": "is_part_of",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HYD-001",
+      "target": "HYD-002",
+      "predicate": "is_application_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HYD-003",
+      "target": "HYD-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "HYD-003",
+      "target": "ANT-003",
+      "predicate": "is_application_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "METHOD-002",
+      "target": "SPI-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "METHOD-002",
+      "target": "SPI-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-001",
+      "target": "HMAP-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-001",
+      "target": "SPI-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-002",
+      "target": "SPI-001",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 5,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-002",
+      "target": "D-001",
+      "predicate": "is_part_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-002",
+      "target": "DRG-001",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-002",
+      "target": "CDN-003",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SPI-002",
+      "target": "CDN-001",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SYS-002",
+      "target": "DAT-MAIN",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SYS-003",
+      "target": "SYS-001",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SYS-003",
+      "target": "SYS-002",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SYS-003",
+      "target": "GUI-001",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "SYS-004",
+      "target": "SYS-001",
+      "predicate": "extends",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-001",
+      "target": "VLD-002",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-001",
+      "target": "VLD-003",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-001",
+      "target": "VLD-002",
+      "predicate": "adds_detail_to",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-002",
+      "target": "HMAP-004",
+      "predicate": "supports",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-002",
+      "target": "DRG-001",
+      "predicate": "complements",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-002",
+      "target": "VLD-003",
+      "predicate": "is_prerequisite_for",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-003",
+      "target": "VLD-002",
+      "predicate": "is_example_of",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-003",
+      "target": "VLD-001",
+      "predicate": "is_example_of",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-003",
+      "target": "DRG-001",
+      "predicate": "supports",
+      "strokeWidth": 3,
+      "strokeDasharray": "none"
+    },
+    {
+      "source": "VLD-003",
+      "target": "HMAP-004",
+      "predicate": "complements",
+      "strokeWidth": 1,
+      "strokeDasharray": "none"
+    }
+  ]
+}
